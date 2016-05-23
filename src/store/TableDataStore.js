@@ -447,9 +447,8 @@ export class TableDataStore {
       // To avoid to search on a data which be searched or filtered
       // But this solution have a poor performance, because I do a filter again
       if (this.filterObj !== null) {
-        this.filter(this.filterObj)  
+        this.filter(this.filterObj);
       }
-      
       const source = this.isOnFilter ? this.filteredData : this.data;
 
       this.filteredData = source.filter( row => {
